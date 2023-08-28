@@ -22,11 +22,12 @@ steps:
       ls -la
       xcodebuild -help
       xcodebuild -list
+      xcodebuild -showsdks
 - task: Xcode@5
   inputs:
     actions: 'Archive'
-    scheme: ''
-    sdk: 'iphoneos'
+    scheme: 'iGoat'
+    sdk: 'iphone13'
     configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
