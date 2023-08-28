@@ -18,6 +18,7 @@ steps:
       brew install gen-ir
       ls
       pwd
+      cd igoat
       xcodebuild -help
       xcodebuild -list
 - task: Xcode@5
