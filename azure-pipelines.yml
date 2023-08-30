@@ -27,7 +27,7 @@ steps:
   inputs:
     actions: 'Archive'
     scheme: 'iGoat'
-    sdk: 'iphone13'
+    sdk: 'iphoneos16.2'
     configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
