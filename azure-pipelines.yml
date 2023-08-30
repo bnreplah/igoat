@@ -23,12 +23,13 @@ steps:
       xcodebuild -help
       xcodebuild -list
       xcodebuild -showsdks
+      pwd
 - task: Xcode@5
   inputs:
     actions: 'archive'
     configuration: 'Debug'
     sdk: 'iphoneos16.2'
-    xcWorkspacePath: '**/iGoat-Swift.xcworkspace'
+    xcWorkspacePath: 'iGoat-Swift.xcworkspace'
     scheme: 'iGoat'
     packageApp: false
 
