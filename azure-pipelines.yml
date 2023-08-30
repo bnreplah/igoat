@@ -24,20 +24,12 @@ steps:
       xcodebuild -list
       xcodebuild -showsdks
       pwd
-- task: Xcode@5
-  inputs:
-    actions: 'archive'
-    configuration: 'Debug'
-    sdk: 'iphoneos16.2'
-    xcWorkspacePath: 'iGoat/iGoat.xcodeproj'
-    scheme: 'iGoat'
-    packageApp: false
-    destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone 13'
+      xcodebuild archive -project iGoat.xcodeproj  -configuration Debug -scheme iGoat -destination generic/platform=iOS DEBUG_INFORMATION_FORMAT=dwarf-with-dsym -archivePath iGoat.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ENABLE_BITCODE=NO | tee build_log.txt
+      ls -la 
 
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
+    script:
       ls -la
       ls -la */*
