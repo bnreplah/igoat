@@ -25,9 +25,16 @@ steps:
       xcodebuild -showsdks
 - task: Xcode@5
   inputs:
-    actions: 'Archive'
-    scheme: 'iGoat'
-    sdk: 'iphoneos16.2'
+    actions: 'archive'
     configuration: 'Debug'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
+    sdk: 'iphoneos16.2'
+    xcWorkspacePath: '**/iGoat-Swift.xcworkspace'
+    scheme: 'iGoat'
+    packageApp: false
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      ls -la
+      ls -la */*
