@@ -29,7 +29,7 @@ steps:
     actions: 'archive'
     configuration: 'Debug'
     sdk: 'iphoneos16.2'
-    xcWorkspacePath: 'iGoatiGoat.xcodeproj'
+    xcWorkspacePath: 'iGoat/iGoat.xcodeproj'
     scheme: 'iGoat'
     packageApp: false
 
