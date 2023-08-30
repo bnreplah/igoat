@@ -33,8 +33,7 @@ steps:
     scheme: 'iGoat'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationTypeOption: 'devices'
-    destinationDevices: 'Any iOS Device'
+    destinationSimulators: 'iPhone 13'
 
 - task: Bash@3
   inputs:
